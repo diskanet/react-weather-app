@@ -1,0 +1,255 @@
+//
+// ************* Flexbox *************
+//
+
+//
+// ---- Flex Basis ----
+// Utilities for controlling the initial size of flex items.
+//
+
+// Flex items size: 4px.
+.basis-4 {
+  flex-basis: 0.25rem;
+}
+// Flex items size: 8px.
+.basis-8 {
+  flex-basis: 0.5rem;
+}
+// Flex items size: 12px.
+.basis-12 {
+  flex-basis: 0.75rem;
+}
+// Flex items size: 16px.
+.basis-16 {
+  flex-basis: 1rem;
+}
+// Flex items size: 20px.
+.basis-20 {
+  flex-basis: 1.25rem;
+}
+// Flex items size: 24px.
+.basis-24 {
+  flex-basis: 1.5rem;
+}
+// Flex items size: 28px.
+.basis-28 {
+  flex-basis: 1.75rem;
+}
+// Flex items size: 32px.
+.basis-32 {
+  flex-basis: 2rem;
+}
+// Flex items size: 36px.
+.basis-36 {
+  flex-basis: 2.25rem;
+}
+// Flex items size: 40px.
+.basis-40 {
+  flex-basis: 2.5rem;
+}
+// Flex items size: 44px.
+.basis-44 {
+  flex-basis: 2.75rem;
+}
+// Flex items size: 48px.
+.basis-48 {
+  flex-basis: 3rem;
+}
+// Flex items size: 52px.
+.basis-52 {
+  flex-basis: 3.25rem;
+}
+// Flex items size: 56px.
+.basis-56 {
+  flex-basis: 3.5rem;
+}
+// Flex items size: 60px.
+.basis-60 {
+  flex-basis: 3.75rem;
+}
+// Flex items size: 64px.
+.basis-64 {
+  flex-basis: 4rem;
+}
+// Flex items size: 72px.
+.basis-72 {
+  flex-basis: 4.5rem;
+}
+// Flex items size: 80px.
+.basis-80 {
+  flex-basis: 5rem;
+}
+// Flex items size: 88px.
+.basis-88 {
+  flex-basis: 5.5rem;
+}
+// Flex items size: 96px.
+.basis-96 {
+  flex-basis: 6rem;
+}
+// Flex items size: 224px.
+.basis-224 {
+  flex-basis: 14rem;
+}
+// Flex items size: 25%.
+.basis-quarter {
+  flex-basis: 25%;
+}
+// Flex items size: 50%.
+.basis-half {
+  flex-basis: 50%;
+}
+// Flex items size: 100%.
+.basis-full {
+  flex-basis: 100%;
+}
+// Flex items size: fill.
+.basis-fill {
+  flex-basis: fill;
+}
+
+//
+// ---- Flex Direction ----
+// Utilities for controlling the direction of flex items.
+//
+
+// Use flex-row to position flex items horizontally in the same direction as text:
+.flex-row {
+  flex-direction: row;
+}
+// Use flex-row-reverse to position flex items horizontally in the opposite direction:
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+// Use flex-col to position flex items vertically:
+.flex-col {
+  flex-direction: column;
+}
+// Use flex-col-reverse to position flex items vertically in the opposite direction:
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+//
+// ---- Flex Wrap ----
+// Utilities for controlling how flex items wrap.
+//
+
+// Use flex-wrap to allow flex items to wrap:
+.flex-wrap {
+  flex-wrap: wrap;
+}
+// Use flex-wrap-reverse to wrap flex items in the reverse direction:
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+// Use flex-nowrap to prevent flex items from wrapping, causing inflexible items to overflow the container if necessary:
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+//
+// ---- Flex ----
+// Utilities for controlling how flex items both grow and shrink.
+//
+
+// Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size:
+.flex-1 {
+  flex: 1 1 0%;
+}
+// Use flex-auto to allow a flex item to grow and shrink, taking into account its initial size:
+.flex-auto {
+  flex: 1 1 auto;
+}
+// Use flex-initial to allow a flex item to shrink but not grow, taking into account its initial size:
+.flex-initial {
+  flex: 0 1 auto;
+}
+// Use flex-none to prevent a flex item from growing or shrinking:
+.flex-auto {
+  flex: none;
+}
+
+//
+// ---- Flex Grow ----
+// Utilities for controlling how flex items grow.
+//
+
+// Use grow to allow a flex item to grow to fill any available space:
+.grow {
+  flex-grow: 1;
+}
+// Use grow-0 to prevent a flex item from growing:
+.grow-0 {
+  flex-grow: 0;
+}
+
+//
+// ---- Flex Shrink ----
+// Utilities for controlling how flex items shrink.
+//
+
+// Use shrink to allow a flex item to shrink if needed:
+.shrink {
+  flex-shrink: 1;
+}
+// Use shrink-0 to prevent a flex item from shrinking:
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+//
+// ---- Justify Content ----
+// Utilities for controlling how flex and grid items are positioned along a container's main axis.
+//
+
+// Use justify-start to justify items against the start of the container’s main axis:
+.justify-start {
+  justify-content: flex-start;
+}
+// Use justify-center to justify items along the center of the container’s main axis:
+.justify-center {
+  justify-content: center;
+}
+// Use justify-end to justify items against the end of the container’s main axis:
+.justify-end {
+  justify-content: flex-end;
+}
+// Use justify-between to justify items along the container’s main axis such that there is an equal amount of space between each item:
+.justify-between {
+  justify-content: space-between;
+}
+// Use justify-around to justify items along the container’s main axis such that there is an equal amount of space on each side of each item:
+.justify-around {
+  justify-content: space-around;
+}
+// Use justify-evenly to justify items along the container’s main axis such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using justify-around:
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+//
+// ---- Align Items ----
+// Utilities for controlling how flex and grid items are positioned along a container's cross axis.
+//
+
+// Use align-start to align items to the start of the container’s cross axis:
+.align-start {
+  align-items: flex-start;
+}
+// Use align-center to align items along the center of the container’s cross axis:
+.align-center {
+  align-items: center;
+}
+// Use align-end to align items to the end of the container’s cross axis:
+.align-end {
+  align-items: flex-end;
+}
+// Use align-baseline to align items along the container’s cross axis such that all of their baselines align:
+.align-baseline {
+  align-items: baseline;
+}
+// Use align-stretch to stretch items to fill the container’s cross axis:
+.align-stretch {
+  align-items: stretch;
+}

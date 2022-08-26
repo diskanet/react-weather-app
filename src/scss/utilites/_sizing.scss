@@ -1,0 +1,329 @@
+//
+// ************* Sizing *************
+//
+
+//
+// ---- Width ----
+// Utilities for setting the width of an element.
+//
+
+// Element fixed width: 4px.
+.w-4 {
+  width: 0.25rem;
+}
+// Element fixed width: 8px.
+.w-8 {
+  width: 0.5rem;
+}
+// Element fixed width: 12px.
+.w-12 {
+  width: 0.75rem;
+}
+// Element fixed width: 16px.
+.w-16 {
+  width: 1rem;
+}
+// Element fixed width: 20px.
+.w-20 {
+  width: 1.25rem;
+}
+// Element fixed width: 24px.
+.w-24 {
+  width: 1.5rem;
+}
+// Element fixed width: 28px.
+.w-28 {
+  width: 1.75rem;
+}
+// Element fixed width: 32px.
+.w-32 {
+  width: 2rem;
+}
+// Element fixed width: 36px.
+.w-36 {
+  width: 2.25rem;
+}
+// Element fixed width: 40px.
+.w-40 {
+  width: 2.5rem;
+}
+// Element fixed width: 44px.
+.w-44 {
+  width: 2.75rem;
+}
+// Element fixed width: 48px.
+.w-48 {
+  width: 3rem;
+}
+// Element fixed width: 52px.
+.w-52 {
+  width: 3.25rem;
+}
+// Element fixed width: 56px.
+.w-56 {
+  width: 3.5rem;
+}
+// Element fixed width: 60px.
+.w-60 {
+  width: 3.75rem;
+}
+// Element fixed width: 64px.
+.w-64 {
+  width: 4rem;
+}
+// Element fixed width: 68px.
+.w-68 {
+  width: 4.25rem;
+}
+// Element fixed width: 72px.
+.w-72 {
+  width: 4.5rem;
+}
+// Element fixed width: 76px.
+.w-76 {
+  width: 4.75rem;
+}
+// Element fixed width: 80px.
+.w-80 {
+  width: 5rem;
+}
+// Element fixed width: 84px.
+.w-84 {
+  width: 5.25rem;
+}
+// Element fixed width: 88px.
+.w-88 {
+  width: 5.5rem;
+}
+// Element fixed width: 92px.
+.w-92 {
+  width: 5.75rem;
+}
+// Element fixed width: 96px.
+.w-96 {
+  width: 6rem;
+} // Element fixed width: 100px.
+.w-100 {
+  width: 6.25rem;
+}
+// Element fixed width: 104px.
+.w-104 {
+  width: 6.5rem;
+}
+// Element fixed width: 112px.
+.w-112 {
+  width: 7rem;
+}
+// Element fixed width: 120px.
+.w-120 {
+  width: 7.5rem;
+}
+// Element fixed width: 128px.
+.w-128 {
+  width: 8rem;
+}
+// Element fixed width: 136px.
+.w-136 {
+  width: 8.5rem;
+}
+// Element fixed width: 144px.
+.w-144 {
+  width: 9rem;
+}
+// Element fixed width: 152px.
+.w-152 {
+  width: 9.5rem;
+}
+// Element fixed width: 160px.
+.w-160 {
+  width: 10rem;
+}
+// Element fixed width: 224px.
+.w-224 {
+  width: 14rem;
+}
+// Element quarter width percent: 25%.
+.w-quarter {
+  width: 25%;
+}
+// Element half width viewport: 25vw.
+.w-quarter-vw {
+  width: 25vw;
+}
+// Element half width percent: 50%.
+.w-half {
+  width: 50%;
+}
+// Element half width viewport: 50vw.
+.w-half-vw {
+  width: 50vw;
+}
+// Element full width percent: 100%.
+.w-full {
+  width: 100%;
+}
+// Element full width viewport: 100vw.
+.w-full-vw {
+  width: 100vw;
+}
+
+//
+// ---- Height ----
+// Utilities for setting the height of an element.
+//
+
+// Element fixed height: 4px.
+.h-4 {
+  height: 0.25rem;
+}
+// Element fixed height: 8px.
+.h-8 {
+  height: 0.5rem;
+}
+// Element fixed height: 12px.
+.h-12 {
+  height: 0.75rem;
+}
+// Element fixed height: 16px.
+.h-16 {
+  height: 1rem;
+}
+// Element fixed height: 20px.
+.h-20 {
+  height: 1.25rem;
+}
+// Element fixed height: 24px.
+.h-24 {
+  height: 1.5rem;
+}
+// Element fixed height: 28px.
+.h-28 {
+  height: 1.75rem;
+}
+// Element fixed height: 32px.
+.h-32 {
+  height: 2rem;
+}
+// Element fixed height: 36px.
+.h-36 {
+  height: 2.25rem;
+}
+// Element fixed height: 40px.
+.h-40 {
+  height: 2.5rem;
+}
+// Element fixed height: 44px.
+.h-44 {
+  height: 2.75rem;
+}
+// Element fixed height: 48px.
+.h-48 {
+  height: 3rem;
+}
+// Element fixed height: 52px.
+.h-52 {
+  height: 3.25rem;
+}
+// Element fixed height: 56px.
+.h-56 {
+  height: 3.5rem;
+}
+// Element fixed height: 60px.
+.h-60 {
+  height: 3.75rem;
+}
+// Element fixed height: 64px.
+.h-64 {
+  height: 4rem;
+}
+// Element fixed height: 68px.
+.h-68 {
+  height: 4.25rem;
+}
+// Element fixed height: 72px.
+.h-72 {
+  height: 4.5rem;
+}
+// Element fixed height: 76px.
+.h-76 {
+  height: 4.75rem;
+}
+// Element fixed height: 80px.
+.h-80 {
+  height: 5rem;
+}
+// Element fixed height: 84px.
+.h-84 {
+  height: 5.25rem;
+}
+// Element fixed height: 88px.
+.h-88 {
+  height: 5.5rem;
+}
+// Element fixed height: 92px.
+.h-92 {
+  height: 5.75rem;
+}
+// Element fixed height: 96px.
+.h-96 {
+  height: 6rem;
+} // Element fixed height: 100px.
+.h-100 {
+  height: 6.25rem;
+}
+// Element fixed height: 104px.
+.h-104 {
+  height: 6.5rem;
+}
+// Element fixed height: 112px.
+.h-112 {
+  height: 7rem;
+}
+// Element fixed height: 120px.
+.h-120 {
+  height: 7.5rem;
+}
+// Element fixed height: 128px.
+.h-128 {
+  height: 8rem;
+}
+// Element fixed height: 136px.
+.h-136 {
+  height: 8.5rem;
+}
+// Element fixed height: 144px.
+.h-144 {
+  height: 9rem;
+}
+// Element fixed height: 152px.
+.h-152 {
+  height: 9.5rem;
+}
+// Element fixed height: 160px.
+.h-160 {
+  height: 10rem;
+}
+// Element quarter height percent: 25%.
+.h-quarter {
+  height: 25%;
+}
+// Element half height viehport: 25vh.
+.h-quarter-vh {
+  height: 25vh;
+}
+// Element half height percent: 50%.
+.h-half {
+  height: 50%;
+}
+// Element half height viehport: 50vh.
+.h-half-vh {
+  height: 50vh;
+}
+// Element full height percent: 100%.
+.h-full {
+  height: 100%;
+}
+// Element full height viehport: 100vh.
+.h-full-vh {
+  height: 100vh;
+}

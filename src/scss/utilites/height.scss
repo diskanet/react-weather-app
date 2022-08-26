@@ -1,0 +1,20 @@
+// Use align-start to align items to the start of the container’s cross axis:
+.align-start {
+  align-items: flex-start;
+}
+// Use align-center to align items along the center of the container’s cross axis:
+.align-center {
+  align-items: center;
+}
+// Use align-end to align items to the end of the container’s cross axis:
+.align-end {
+  align-items: flex-end;
+}
+// Use align-baseline to align items along the container’s cross axis such that all of their baselines align:
+.align-baseline {
+  align-items: baseline;
+}
+// Use align-stretch to stretch items to fill the container’s cross axis:
+.align-stretch {
+  align-items: stretch;
+}

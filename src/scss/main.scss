@@ -1,0 +1,53 @@
+@import "../scss/connect";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-style {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 12px;
+  gap: 4px;
+
+  width: 343px;
+  height: 36px;
+
+  outline: none;
+  /* grayscale-6 */
+
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+}
+
+.input-style:focus,
+.input-style:active {
+  border: 1px solid indigo;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 32px;
+
+  &__label {
+    width: 25%;
+  }
+
+  &__value,
+  &__label {
+    font-size: 16px;
+  }
+}
+.container {
+  min-height: 100vh;
+}
+
+.weather-block {
+  width: 500px;
+  padding: 24px 24px;
+  background: #eee;
+  border-radius: 20px;
+}
