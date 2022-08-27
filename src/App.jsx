@@ -1,63 +1,62 @@
-import React from "react";
-// import axios from "axios";
-import "./index.js";
-import InfoRow from "./components/InfoRow";
-import SearchBar from "./components/SearchBar";
+import React, { useState } from "react";
+import axios from "axios";
 
-const apiKey = "41f68e3c835e2516f4e4e44a2aa530b2";
+export const App = () => {
+  const [data, setData] = useState({});
+  const [location, setLocation] = useState("");
 
-class App extends React.Component {
-  state = {
-    temp: undefined,
-    city: undefined,
-    country: undefined,
-    humidity: undefined,
-    wind: undefined,
-    sunrise: undefined,
-    sunset: undefined,
-    description: undefined,
-    error: undefined,
+  const apiKey = "41f68e3c835e2516f4e4e44a2aa530b2";
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
+
+  const searchLocation = (event) => {
+    if (event.key === "Enter") {
+      axios.get(apiUrl).then((response) => {
+        setData(response.data);
+      });
+    }
   };
 
-  gettingWeather = async (event) => {
-    event.preventDefault();
-    const city = event.target.elements.city.value;
-    const apiUrl = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
-    );
-    const data = await apiUrl.json();
-    console.log(data);
-
-    this.setState({
-      temp: data.main.temp,
-      city: data.name,
-      country: data.sys.country,
-      humidity: data.main.humidity,
-      wind: data.wind.speed,
-      sunrise: data.sys.sunrise,
-      sunset: data.sys.sunset,
-      description: data.clouds.all,
-      error: "",
-    });
-  };
-
-  render() {
-    return (
-      <div className="container flex align-center justify-center">
-        <div className="weather-block flex flex-col">
-          <SearchBar weatherMethod={this.gettingWeather} />
-          <InfoRow label="City" value={this.state.city} />
-          <InfoRow label="Country" value={this.state.country} />
-          <InfoRow label="Temperature" value={this.state.temp} />
-          <InfoRow label="Humidity" value={this.state.humidity} />
-          <InfoRow label="Wind" value={this.state.wind} />
-          <InfoRow label="Sunrise" value={this.state.sunrise} />
-          <InfoRow label="Sunset" value={this.state.sunset} />
-          <InfoRow label="Description" value={this.state.description} />
+  return (
+    <div className="container flex align-center justify-center">
+      <div className="weather-block">
+        <div className="top flex flex-col">
+          <div className="main-info flex align-end">
+            <div className="degrees flex">
+              {data.main ? <p> {data.main.temp}</p> : null}
+              <span>&#8451;</span>
+            </div>
+            <div className="city">
+              <p>{data.name}</p>
+            </div>
+            <div className="weather-icon"></div>
+          </div>
+          <div className="search-bar flex  ">
+            <input
+              className="input-style flex-1"
+              value={location}
+              onChange={(event) => setLocation(event.target.value)}
+              onKeyPress={searchLocation}
+              type="text"
+              name="city"
+              laceholder="Enter city..."
+            />
+          </div>
+        </div>
+        <div className="bottom">
+          <div className="bottom__row flex">
+            <div className="bottom__block flex flex-col flex-1 justify-center">
+              <p className="label">Humidity</p>
+              <p className="value">
+                {data.main ? <p> {data.main.humidity}</p> : null}
+              </p>
+            </div>
+            <div className="bottom__block flex flex-col flex-1 justify-center">
+              <p className="label">Wind</p>
+              <p className="value">75</p>
+            </div>
+          </div>
         </div>
       </div>
-    );
-  }
-}
-
-export default App;
+    </div>
+  );
+};

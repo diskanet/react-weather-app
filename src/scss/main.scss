@@ -26,28 +26,43 @@ body {
   border: 1px solid indigo;
 }
 
-.info-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  height: 32px;
-
-  &__label {
-    width: 25%;
-  }
-
-  &__value,
-  &__label {
-    font-size: 16px;
-  }
-}
 .container {
   min-height: 100vh;
+  min-width: 100%;
 }
 
 .weather-block {
-  width: 500px;
+  width: 80%;
   padding: 24px 24px;
-  background: #eee;
+  background: lightgrey;
   border-radius: 20px;
+}
+
+.search-bar {
+  padding: 24px 0px;
+}
+
+.bottom,
+.top {
+  padding: 24px 24px;
+}
+
+.degrees {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.city {
+  font-size: 40px;
+  font-weight: 500;
+  margin-left: 12px;
+}
+
+.bottom__block {
+  padding: 24px 24px;
+
+  .value {
+    font-size: 40px;
+    font-weight: 700;
+  }
 }
