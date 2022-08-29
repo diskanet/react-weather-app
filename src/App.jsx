@@ -1,59 +1,64 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { SearchBar } from "./components/SearchBar";
+import { TitleRow } from "./components/TitleRow";
+import { InfoBlock } from "./components/InfoBlock";
+import { getUrl } from "./utils/utils";
+import weatherImg from "./img/weather.jpeg";
 
 export const App = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
 
-  const apiKey = "41f68e3c835e2516f4e4e44a2aa530b2";
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
+  const { weather = {}, name: city, main = {}, wind = {} } = data;
 
-  const searchLocation = (event) => {
-    if (event.key === "Enter") {
-      axios.get(apiUrl).then((response) => {
-        setData(response.data);
-      });
-    }
+  const { temp, humidity } = main;
+  const { main: description } = weather;
+  const { speed } = wind;
+
+  const apiUrl = getUrl(location);
+
+  const handleInput = (event) => {
+    event.preventDefault();
+
+    axios.get(apiUrl).then((response) => {
+      setData(response.data);
+    });
   };
 
+  const inputChange = (event) => setLocation(event.target.value);
+
   return (
-    <div className="container flex align-center justify-center">
+    <div
+      className="container flex align-center justify-center"
+      style={{ background: `url(${weatherImg}) 50%/cover no-repeat` }}
+    >
       <div className="weather-block">
         <div className="top flex flex-col">
-          <div className="main-info flex align-end">
-            <div className="degrees flex">
-              {data.main ? <p> {data.main.temp}</p> : null}
-              <span>&#8451;</span>
-            </div>
-            <div className="city">
-              <p>{data.name}</p>
-            </div>
-            <div className="weather-icon"></div>
-          </div>
-          <div className="search-bar flex  ">
-            <input
-              className="input-style flex-1"
-              value={location}
-              onChange={(event) => setLocation(event.target.value)}
-              onKeyPress={searchLocation}
-              type="text"
-              name="city"
-              laceholder="Enter city..."
-            />
-          </div>
+          <TitleRow title="Weather" />
+          <SearchBar
+            value={location}
+            onChange={inputChange}
+            onSearch={handleInput}
+          />
         </div>
         <div className="bottom">
-          <div className="bottom__row flex">
-            <div className="bottom__block flex flex-col flex-1 justify-center">
-              <p className="label">Humidity</p>
-              <p className="value">
-                {data.main ? <p> {data.main.humidity}</p> : null}
-              </p>
+          <div className="city">
+            <h2>{city}</h2>
+          </div>
+          <div className="weather">
+            <div className="weather__icon"></div>
+            <div className="weather__data">
+              <div className="weather__temp">
+                <p>{temp}</p>
+                <span>&#8451;</span>
+              </div>
+              <div className="weather__main">{description}</div>
             </div>
-            <div className="bottom__block flex flex-col flex-1 justify-center">
-              <p className="label">Wind</p>
-              <p className="value">75</p>
-            </div>
+          </div>
+          <div className="info-row flex">
+            <InfoBlock label="Humidity" value={humidity} />
+            <InfoBlock label="Wind" value={speed} />
           </div>
         </div>
       </div>

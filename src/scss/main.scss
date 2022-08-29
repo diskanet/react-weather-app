@@ -5,37 +5,88 @@ body {
 }
 
 .input-style {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px 12px;
-  gap: 4px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
 
-  width: 343px;
-  height: 36px;
+  color: #ffffff;
+
+  height: 52px;
+  padding: 0px 16px;
 
   outline: none;
-  /* grayscale-6 */
 
-  border: 1px solid #ebebeb;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 12px;
+
+  &:focus,
+  &:active {
+    border: 1px solid #ffffff;
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
 
-.input-style:focus,
-.input-style:active {
-  border: 1px solid indigo;
+.button-style {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+
+  padding: 0px 24px;
+  height: 52px;
+
+  color: #ffffff;
+  background: #4d88ff;
+  border-radius: 12px;
+
+  &:hover {
+    background: #3377ff;
+  }
+  &:active {
+    background: #457ae5;
+  }
 }
 
 .container {
   min-height: 100vh;
   min-width: 100%;
+
+  background: #4d88ff;
+  // background: url(/src/img/weather.jpeg) 50%/cover no-repeat;
 }
 
 .weather-block {
-  width: 80%;
-  padding: 24px 24px;
-  background: lightgrey;
-  border-radius: 20px;
+  width: 720px;
+  padding: 24px 32px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 40px;
+}
+
+.top {
+  padding: 12px 0px;
+  gap: 16px;
+}
+
+.title {
+  h1 {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 64px;
+
+    color: #ffffff;
+  }
 }
 
 .search-bar {
