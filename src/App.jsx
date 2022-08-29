@@ -4,7 +4,9 @@ import { SearchBar } from "./components/SearchBar";
 import { TitleRow } from "./components/TitleRow";
 import { InfoBlock } from "./components/InfoBlock";
 import { getUrl } from "./utils/utils";
-import weatherImg from "./img/weather.jpeg";
+import weatherImg from "./img/weatherImg.jpeg";
+import dropletDegree from "./img/dropletDegree.png";
+import windSpeed from "./img/windSpeed.png";
 
 export const App = () => {
   const [data, setData] = useState({});
@@ -42,25 +44,36 @@ export const App = () => {
             onSearch={handleInput}
           />
         </div>
-        <div className="bottom">
-          <div className="city">
-            <h2>{city}</h2>
-          </div>
-          <div className="weather">
-            <div className="weather__icon"></div>
-            <div className="weather__data">
-              <div className="weather__temp">
-                <p>{temp}</p>
-                <span>&#8451;</span>
+
+        {city !== undefined && (
+          <div className="bottom flex flex-col gap-20">
+            <div className="city">{city}</div>
+            <div className="weather flex">
+              <div className="weather__icon"></div>
+              <div className="weather__data flex-col">
+                <div className="weather__temp flex">
+                  <p>{temp}</p>
+                  <span>&#8451;</span>
+                </div>
+                <div className="weather__main flex">{description}</div>
               </div>
-              <div className="weather__main">{description}</div>
+            </div>
+            <div className="info-row flex gap-12">
+              <InfoBlock
+                icon={dropletDegree}
+                label="Humidity"
+                value={humidity}
+                metric={"%"}
+              />
+              <InfoBlock
+                icon={windSpeed}
+                label="Wind"
+                value={speed}
+                metric={"m/s"}
+              />
             </div>
           </div>
-          <div className="info-row flex">
-            <InfoBlock label="Humidity" value={humidity} />
-            <InfoBlock label="Wind" value={speed} />
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

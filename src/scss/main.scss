@@ -1,17 +1,7 @@
 @import "../scss/connect";
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 .input-style {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-
-  color: #ffffff;
+  @include font-style(300, 24px, 24px, #ffffff);
 
   height: 52px;
   padding: 0px 16px;
@@ -33,16 +23,11 @@ body {
 }
 
 .button-style {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
+  @include font-style(300, 24px, 24px, #ffffff);
 
   padding: 0px 24px;
   height: 52px;
 
-  color: #ffffff;
   background: #4d88ff;
   border-radius: 12px;
 
@@ -65,7 +50,7 @@ body {
 .weather-block {
   width: 720px;
   padding: 24px 32px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.16);
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.16);
   backdrop-filter: blur(40px);
   /* Note: backdrop-filter has minimal browser support */
@@ -79,13 +64,7 @@ body {
 
 .title {
   h1 {
-    font-family: "Rubik";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 64px;
-
-    color: #ffffff;
+    @include font-style(400, 48px, 64px, #ffffff);
   }
 }
 
@@ -95,7 +74,7 @@ body {
 
 .bottom,
 .top {
-  padding: 24px 24px;
+  padding: 12px 0px;
 }
 
 .degrees {
@@ -104,16 +83,27 @@ body {
 }
 
 .city {
-  font-size: 40px;
-  font-weight: 500;
-  margin-left: 12px;
+  @include font-style(400, 32px, 32px, #ffffff);
 }
 
-.bottom__block {
-  padding: 24px 24px;
+.weather__temp {
+  @include font-style(500, 64px, px, #ffffff);
+}
 
-  .value {
-    font-size: 40px;
-    font-weight: 700;
+.info-block {
+  height: 96px;
+  padding: 16px 16px;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 12px;
+  &__label {
+    @include font-style(300, 20px, 24px, #666666);
+  }
+  &__value {
+    @include font-style(400, 40px, 40px, #ffffff);
   }
 }
+
+.weather__main {
+  @include font-style(400, 24px, 24px, #ffffff);
+}
+
