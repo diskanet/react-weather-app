@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faCloudSunRain } from "@fortawesome/pro-light-svg-icons";
+
 import { SearchBar } from "./components/SearchBar";
 import { TitleRow } from "./components/TitleRow";
 import { InfoBlock } from "./components/InfoBlock";
