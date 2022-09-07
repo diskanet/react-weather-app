@@ -1,11 +1,24 @@
-# Getting Started with Create React App
+# React Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
+
+- [About](#about)
+- [Stack](#stack)
+- [Run](#Run)
+
+## About
+
+A simple app that lets you know the weather for a specific location.
 
 ## Stack
 
-In the project directory, you can run:
+- React
+- SCSS
+- axios
+- Font Awesome
 
-### Publish 
+## Run
+
+Follow the link below to run this project:
 
 [React Weather App](https://diskanet.github.io/react-weather-app)

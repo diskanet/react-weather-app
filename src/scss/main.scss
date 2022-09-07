@@ -20,6 +20,9 @@
   &::placeholder {
     color: rgba(255, 255, 255, 0.5);
   }
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
 }
 
 .button-style {
@@ -44,7 +47,7 @@
   min-width: 100%;
 
   background: #4d88ff;
-  // background: url(/src/img/weather.jpeg) 50%/cover no-repeat;
+  // background: url(./src/img/ukraine.jpeg) 50% / cover no-repeat;
 }
 
 .weather-block {
@@ -90,11 +93,18 @@
   @include font-style(500, 64px, px, #ffffff);
 }
 
+.weather__icon {
+  @include font-style(false, 72px, 72px, #ffffff);
+}
+
 .info-block {
   height: 96px;
   padding: 16px 16px;
   background: rgba(255, 255, 255, 0.24);
   border-radius: 12px;
+  .icon {
+    @include font-style(false, 48px, 64px, #4d88ff);
+  }
   &__label {
     @include font-style(300, 20px, 24px, #666666);
   }
@@ -106,4 +116,3 @@
 .weather__main {
   @include font-style(400, 24px, 24px, #ffffff);
 }
-
