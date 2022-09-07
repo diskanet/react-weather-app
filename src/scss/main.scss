@@ -71,6 +71,17 @@
   }
 }
 
+.refresh {
+  @include font-style(400, 28px, 32px, #ffffff);
+
+  &:hover {
+    color: #3377ff;
+  }
+  &:active {
+    color: #457ae5;
+  }
+}
+
 .search-bar {
   padding: 24px 0px;
 }

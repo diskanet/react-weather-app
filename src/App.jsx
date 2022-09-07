@@ -40,7 +40,7 @@ export const App = () => {
     >
       <div className="weather-block">
         <div className="top flex flex-col">
-          <TitleRow title="Weather" />
+          <TitleRow title="Weather" visibility={city} />
           <SearchBar
             value={location}
             onChange={inputChange}
@@ -49,7 +49,7 @@ export const App = () => {
         </div>
 
         {!!city && (
-          <div className="bottom flex flex-col gap-20">
+          <div className={"bottom flex flex-col gap-20"}>
             <div className="city">{city}</div>
             <div className="weather gap-16 flex">
               <div className="weather__icon bounding-96">
@@ -57,7 +57,7 @@ export const App = () => {
               </div>
               <div className="weather__data flex-col">
                 <div className="weather__temp flex">
-                  <p>{temp}</p>
+                  <p>{temp.toFixed()}</p>
                   <span>&#8451;</span>
                 </div>
                 <div className="weather__main flex">{description}</div>
